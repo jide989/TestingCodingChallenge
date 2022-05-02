@@ -7,8 +7,9 @@ Scenario: Plan a journey
 	And user can see the fastest route
 
 Scenario: Edit a journey
-	Given user plans a journey from London Victoria to London Bridge
-	When user changes the destination to London Waterloo
+	Given user is on the TfL home page
+	And user plans a journey from London Victoria to London Bridge
+	When user changes the destination to London Waterloo	
 	Then user should be presented with the Journey Results page with the correct summary
 	And user can see the fastest route
 

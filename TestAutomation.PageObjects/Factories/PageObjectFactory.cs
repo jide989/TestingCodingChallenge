@@ -12,9 +12,19 @@ namespace TestAutomation.PageObjects.Factories
             _webDriverManager = webDriverManager;
         }
 
+        public TflHomePage CreateHomePage()
+        {
+            return new TflHomePage(_webDriverManager);
+        }
+
         public LoginPage CreateLoginPage()
         {
             return new LoginPage(_webDriverManager);
+        }
+
+        public JourneyResultPage CreateJourneyResultPage()
+        {
+            return new JourneyResultPage(_webDriverManager);
         }
     }
 }
